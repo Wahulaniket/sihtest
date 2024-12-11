@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yogesh Tayade</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+
+  <body>
+     <!-- Start Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><i class="bi bi-command"></i>&nbsp;&nbsp;ProSortX</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#services">Team</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#team">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery">Gallery</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="/#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+    <div class="container p-5">
+        <div class="row p-5">
+            <div class="col-md-6 mt-5">
+              <h1 style="text-align: right;">Check electricity demand:</h1>  
+            </div>
+            <div class="col-md-3 mt-5 p-2">
+              <form method="POST">
+                <input type="date" name="date"class="form-control" required> To <input type="date" name="End date"class="form-control" required>
+                <button class ="btn btn-warning mt-3" type="submit">Predict</button>
+              </form>              
+            </div>
+        </div>
+
+        <div class="row p-5">
+            <div class="col-md-12 p-3">                
+                <center><h1>Predicted Output</h1>
+                  {% if graph_A_P %}
+                  <h2>graph_A_P</h2>
+                    <!--<img src="data:static/Graph pngs/A_V:base64,{{graph_A_P}}" class="img-fluid" alt=""></center> -->
+                  {%endif%}
+            </div>           
+        </div>
+        <graphs id="gallery" class="gallery">
+            <div class="container">
+              <div class="row">                
+                <div class="col-md-12">
+                    <h1>Last 24 Hrs history</h1>
+                  <!-- Tabs -->
+                  <nav class="">
+                    <div
+                      class="nav nav-tabs nav-justified"
+                      id="nav-tab"
+                      role="tablist"
+                    >
+                      <button
+                        class="nav-link active text-white"
+                        id="nav-1-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-1"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-1"
+                        aria-selected="true"
+                      >
+                        Overall Substations (5)
+                      </button>
+                      <button
+                        class="nav-link text-white"
+                        id="nav-2-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-2"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-2"
+                        aria-selected="true"
+                      >
+                        Sub-station 1
+                      </button>
+                      <button
+                        class="nav-link text-white"
+                        id="nav-3-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-3"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-3"
+                        aria-selected="false"
+                      >
+                      Sub-station 2
+                      </button>
+                      <button
+                        class="nav-link text-white"
+                        id="nav-4-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-4"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-4"
+                        aria-selected="false"
+                      >
+                      Sub-station 3
+                      </button>
+                      <button
+                        class="nav-link text-white"
+                        id="nav-5-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-5"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-5"
+                        aria-selected="false"
+                      >
+                      Sub-station 4
+                      </button>
+                      <button
+                        class="nav-link text-white"
+                        id="nav-6-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-6"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-6"
+                        aria-selected="false"
+                      >
+                      Sub-station 5
+                      </button>
+                      <button
+                        class="nav-link text-white"
+                        id="nav-7-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-7"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-7"
+                        aria-selected="false"
+                      >
+                      Sub-station 6
+                      </button>
+                    
+                    </div>
+                  </nav>
+                  <!-- End Tabs -->
+                </div>
+                <div class="col-md-12">
+                  <!-- Tab content -->
+                  <div class="tab-content" id="nav-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="nav-1"
+                      role="tabpanel"
+                      aria-labelledby="nav-home-1"
+                      tabindex="0"
+                    >
+                      <div class="row">
+                        <div class="col-md-6">
+                            <img src="static/Picture-sub-all.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table table-light ">
+                                <tr>
+                                    <th>DELHI</th>
+                                    <th>BRPL</th>
+                                    <th>BYPL</th>
+                                    <th>NDPL</th>
+                                    <th>NDMC</th>
+                                    <th>MES</th>
+                                </tr>
+                                <tr>
+                                    <td>1764.76</td>
+                                    <td>747.59</td>
+                                    <td>309.9</td>
+                                    <td>580.69</td>
+                                    <td>87.13</td>
+                                    <td>16.56</td>
+                                </tr>
+                                <tr>
+                                    <td>4164.27</td>
+                                    <td>1819.87</td>
+                                    <td>829.73</td>
+                                    <td>1351.5</td>
+                                    <td>182.58</td>
+                                    <td>38.99</td>
+                                </tr>
+                                <tr>
+                                    <td>3075.30</td>
+                                    <td>1316.98</td>
+                                    <td>594.43</td>
+                                    <td>980.78</td>
+                                    <td>129.69</td>
+                                    <td>24.20</td>
+                                </tr>
+                            </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="nav-2"
+                      role="tabpanel"
+                      aria-labelledby="nav-2-tab"
+                      tabindex="2"
+                    >
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="static/Picture-sub-1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table table-light ">
+                                <tr>
+                                    <th>DELHI</th>                                    
+                                </tr>
+                                <tr>
+                                    <td>1764.76</td>                                   
+                                </tr>
+                                <tr>
+                                    <td>4164.27</td>
+                                </tr>
+                                <tr>
+                                    <td>3075.30</td>
+                                </tr>
+                            </table>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div
+                      class="tab-pane fade"
+                      id="nav-3"
+                      role="tabpanel"
+                      aria-labelledby="nav-3-tab"
+                      tabindex="3"
+                    >
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="static/Picture-sub-1.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-6">
+                                <table class="table table-light ">
+                                    <tr>
+                                        <th>BRPL</th>                                    
+                                    </tr>
+                                    <tr>
+                                        <td>1764.76</td>                                   
+                                    </tr>
+                                    <tr>
+                                        <td>4164.27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3075.30</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+      
+                    <div
+                      class="tab-pane fade"
+                      id="nav-4"
+                      role="tabpanel"
+                      aria-labelledby="nav-4-tab"
+                      tabindex="4"
+                    >
+                      <div class="row">
+                        <div class="col-md-6">
+                            <img src="static/Picture-sub-1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table table-light ">
+                                <tr>
+                                    <th>BYPL</th>                                    
+                                </tr>
+                                <tr>
+                                    <td>1764.76</td>                                   
+                                </tr>
+                                <tr>
+                                    <td>4164.27</td>
+                                </tr>
+                                <tr>
+                                    <td>3075.30</td>
+                                </tr>
+                            </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="tab-pane fade"
+                      id="nav-5"
+                      role="tabpanel"
+                      aria-labelledby="nav-5-tab"
+                      tabindex="5"
+                    >
+                      <div class="row">
+                        <div class="col-md-6">
+                            <img src="static/Picture-sub-1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table table-light ">
+                                <tr>
+                                    <th>NDPL</th>                                    
+                                </tr>
+                                <tr>
+                                    <td>1764.76</td>                                   
+                                </tr>
+                                <tr>
+                                    <td>4164.27</td>
+                                </tr>
+                                <tr>
+                                    <td>3075.30</td>
+                                </tr>
+                            </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="tab-pane fade"
+                      id="nav-6"
+                      role="tabpanel"
+                      aria-labelledby="nav-6-tab"
+                      tabindex="6"
+                    >
+                      <div class="row">
+                        <div class="col-md-6">
+                            <img src="Picture-sub-1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table table-light ">
+                                <tr>
+                                    <th>NDMC</th>                                    
+                                </tr>
+                                <tr>
+                                    <td>1764.76</td>                                   
+                                </tr>
+                                <tr>
+                                    <td>4164.27</td>
+                                </tr>
+                                <tr>
+                                    <td>3075.30</td>
+                                </tr>
+                            </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="tab-pane fade"
+                      id="nav-7"
+                      role="tabpanel"
+                      aria-labelledby="nav-7-tab"
+                      tabindex="7"
+                    >
+                      <div class="row">
+                        <div class="col-md-6">
+                            <img src="Picture-sub-1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table table-light ">
+                                <tr>
+                                    <th>NDMC</th>                                    
+                                </tr>
+                                <tr>
+                                    <td>1764.76</td>                                   
+                                </tr>
+                                <tr>
+                                    <td>4164.27</td>
+                                </tr>
+                                <tr>
+                                    <td>3075.30</td>
+                                </tr>
+                            </table>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+        </graphs>
+    </div>
+    <div class="container-fluid">
+        <div class="row p-3 text-center copyright">
+        <p class="text-white">&copy; ProSortX</p>
+        </div>
+    </div>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"
+    ></script>
+
+  <!-- gallery js -->
+  <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.2/dist/index.bundle.min.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

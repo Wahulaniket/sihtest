@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yogesh Tayade</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="{{ url_for('static', filename='static/style.css') }}"
+          ><i class="bi bi-command"></i>&nbsp;&nbsp;ProSortX</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Team</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+   
+    <!-- Slider -->
+    <div class="container pt-5">
+      <div class="row pt-5 main">
+        <div class="col-md-5 mt-5 mb-5"  data-aos="fade-right"
+     data-aos-duration="3000">
+          <center><img src="static/sih-bg.png" class="rounded-circle profile floating" alt="" srcset="">
+            <h3>SIH 2024</h3>
+        </center>
+        </div>
+        <div class="col-md-7 profile-section" data-aos="fade-left"
+     data-aos-duration="3000">
+          <div class="main-content p-5" >
+            <!-- <span>Hi,</span><br /> -->
+            <span class="hero-title">
+              <!-- I'm -->
+              <span class="hero-title primary-color">PID-1624</span> </span
+            ><br /><br />
+            <p class="projectTitle">To develop an Artificial Intelligence (AI) based model for electricity demand projection including peak demand projection for Delhi Power system
+            </p>
+
+            <h3>- Team ProSortX</h3>
+            <!-- <span>A professor & Web Developer</span> -->
+            <br><br>
+            <a href="model" class="aboutlearnmore">Check Our Model</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container-fluid slider">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="main-content">
+            <span>Hi,</span><br />
+            <span class="hero-title">
+              I'm
+              <span class="hero-title primary-color">Yogesh Tayade</span> </span
+            ><br />
+            <span>A professor & Web Developer</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- End Slider -->
+
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-5">
+            <span class="mainheading">About Problem</span>
+            <span class="subheading">Problem Description</span>
+          </div>
+          <div class="col-md-7">
+            <p class="text-justify">
+                The load profile of power requirement in NCT of Delhi is highly peculiar. We are witnessing huge load variations during the winter and summer months and also during day and night during the same 24-hour window. This causes imbalance in matching the requisite power purchase with the electricity demand. Description: The peak load in Delhi touched 8300 MW this summer while the minimum load during winters goes as low as 2000 MW. The peak during the summer months also occurs twice i.e. first during the day time at about 15:30 hrs and second time in night hours after 23:00 hrs. Further, the solar generation comes during the day time and wanes by the evening hours thereby lending a Duck-curve effect.
+            </p>
+            
+            <div id="demo" class="collapse">
+            <p>
+                Solar plants have been allowed +/- 15% variation by CERC. Further, there is uneven load growth in the city, the upcoming areas are witnessing huge load growth while the developed areas are having the lower organic load growth. In addition to that the load curve in Delhi is highly peaky in nature due to the fact that most of the load is domestic and commercial load while industrial load is minimal. Here it may be taken note that while in other States, industrial load which is 24 x 7 in nature lends stability to the overall load curve of the State. Further, in Delhi agricultural load is minimal. In bigger States, having considerable agricultural load, the supply on agricultural feeders is normally given when ample power is available at cheaper rates, especially during early morning hours/ night hours, which in -turn provides stability to the State' Transmission and Distribution network and also balances power purchase stipulation. Most of the Long Term power is available RTC (Round the Clock) and Slot-wise power is more expensive. Expected Solution: An Artificial Intelligence based model be developed with suitable compensation methodology to factor the weather effects (like temperature humidity, and wind speed, rains/showers), public holidays/ weekly holidays, natural load growth, and real estate development.
+            </p>
+            
+            </div>
+           
+            <a href="#" data-bs-toggle="collapse" data-bs-target="#demo" class="aboutlearnmore">Read More</a>
+          </div>
+          <div class="col-md-5">
+            <img src="static/bg-1.jpg" class="img-fluid rounded">
+          </div>
+        </div>
+
+        <!-- About Cards -->
+        <div class="row mt-5">
+          <div class="col-md-3 col-sm-6">
+            <div class="mycard">
+              <span><i class="bi bi-android2"></i></span>
+              <span class="counter">
+                <span id="counter1">0</span>
+                <script>
+                    let upto = 0;
+                    let counts = setInterval(updated, 100);
+
+                    function updated() {
+                        let count = document.getElementById("counter1");
+                        count.innerHTML = ++upto;
+                        if (upto === 4) {
+                            clearInterval(counts);
+                        }
+                    }
+                </script>
+              </span>
+              <p class="cardtitle">Power Sub-stations</p>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Perferendis, dolorum!
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="mycard">
+              <span><i class="bi bi-airplane"></i></span>
+              <span class="counter">
+                <span id="counter2">0</span>
+                <script>
+                    let upto1 = 0;
+                    let counts1 = setInterval(updated1, 10);
+
+                    function updated1() {
+                        let count1 = document.getElementById("counter2");
+                        count1.innerHTML = ++upto1;
+                        if (upto1 === 20) {
+                            clearInterval(counts1);
+                        }
+                    }
+                </script>
+              </span>
+              <p class="cardtitle">Power Stations</p>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Perferendis, dolorum!
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="mycard">
+              <span><i class="bi bi-car-front-fill"></i></span>
+              <span class="counter">
+                <span id="counter3">0</span>
+                <script>
+                    let upto2 = 0;
+                    let counts2 = setInterval(updated2, 10);
+
+                    function updated2() {
+                        let count2 = document.getElementById("counter3");
+                        count2.innerHTML = ++upto2;
+                        if (upto2 === 30) {
+                            clearInterval(counts2);
+                        }
+                    }
+                </script>
+              </span>
+              <p class="cardtitle">Average Unit Consumption</p>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Perferendis, dolorum!
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="mycard">
+              <span><i class="bi bi-calendar-date"></i></span>
+              <span class="counter">
+                <span id="counter4">0</span>
+                <script>
+                    let upto3 = 0;
+                    let counts3 = setInterval(updated3, 10);
+
+                    function updated3() {
+                        let count3 = document.getElementById("counter4");
+                        count3.innerHTML = ++upto3;
+                        if (upto3 === 40) {
+                            clearInterval(counts3);
+                        }
+                    }
+                </script>
+              </span>
+              <p class="cardtitle">Deadlines</p>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Perferendis, dolorum!
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- End About Cards -->
+      </div>
+    </section>
+    <!-- End About -->
+
+     <!-- Start gallery -->
+     <section id="gallery" class="gallery">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 mb-5">
+              <span class="mainheading">Solution</span>
+              <span class="subheading">Things we have done</span>
+            </div>
+            <div class="col-md-2">
+              <!-- Tabs -->
+              <nav class="">
+                <div
+                  class="nav nav-tabs flex-column nav-justified"
+                  id="nav-tab"
+                  role="tablist"
+                >
+                  <button
+                    class="nav-link active text-white"
+                    id="nav-1-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-1"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-1"
+                    aria-selected="true"
+                  >
+                    Proposed Solution
+                  </button>
+                  <button
+                    class="nav-link text-white"
+                    id="nav-2-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-2"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-2"
+                    aria-selected="true"
+                  >
+                    Technical Approach
+                  </button>
+                  <button
+                    class="nav-link text-white"
+                    id="nav-3-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-3"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-3"
+                    aria-selected="false"
+                  >
+                    Feasibility & Vaibility
+                  </button>
+                  <button
+                    class="nav-link text-white"
+                    id="nav-4-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-4"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-4"
+                    aria-selected="false"
+                  >
+                  Impact & Benifits
+                  </button>
+                
+                </div>
+              </nav>
+              <!-- End Tabs -->
+            </div>
+            <div class="col-md-10">
+              <!-- Tab content -->
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="nav-1"
+                  role="tabpanel"
+                  aria-labelledby="nav-home-1"
+                  tabindex="0"
+                >
+                  <div class="row">
+                    <div class="col-md-6 mt-3">
+                        <h3>Proposed Solution</h3>
+                        <li>We developed a real-time electricity demand forecasting system that predicts daily and hourly demand using historical data from PSP reports over the past 12 years, gathered via web scraping. </li>
+                        <li>We created a dataset enriched with weather data (including temperature, humidity, wind speed, and rainfall) and holiday information (public and weekly holidays) by scraping data from various available sources.</li>
+                        <li>The time series forecasting models like Regression, Transformers, ARIMA, and SARIMA were applied, but SARIMA achieved the best results due to its ability to capture seasonal trends.</li>
+                        <li>The proposed model operates in auto-training mode, which can continuously improve with daily updates.</li>
+                        <li>The proposed prototype has demonstrated notable accuracy in predicting average electricity demand by automatically fetching weather and holiday data. </li>
+                        <li>>The model can be easily extended to predict hourly demand by incorporating hourly data.</li>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <img src="static/Picture-1.png" class="img-fluid" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="nav-2"
+                  role="tabpanel"
+                  aria-labelledby="nav-2-tab"
+                  tabindex="2"
+                >
+                  <div class="row">
+                    <div class="col-md-6 mt-3">    
+                        <h3>Technical Apporoach</h3>                   
+                        <li>The dataset was collected over the last 12 years, including electricity demand and shortages, weather data, public holidays, and real estate data.
+                        Preprocessing is done to transform the data to meet model requirements. </li>
+                       <li>Exploratory data analysis (EDA) was performed to analyze trends and seasonality, identify important features affecting electricity demand, and recognize outliers and missing data.</li>
+                        <li>Correlation analysis was carried out to determine the parameters that significantly influence electricity demand.</li>
+                       <li>The SARIMA model was chosen for time series analysis because we identified a stationary trend in the data.
+                       Hyperparameters are optimized using the Akaike Information Criterion (AIC) method, which helped to find the best model by balancing model fit and complexity.</li>
+                       <li>At inference, the user inputs the prediction period, and weather and holiday data are fetched and fed into the model for predictions.</li>
+                       
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <img src="static/Picture-2.png" class="img-fluid" alt="">
+                    </div>
+                  </div>
+                </div>
+  
+                <div
+                  class="tab-pane fade"
+                  id="nav-3"
+                  role="tabpanel"
+                  aria-labelledby="nav-3-tab"
+                  tabindex="3"
+                >
+                    <div class="row">
+                        <div class="col-md-6 mt-3">
+                            <h3>Feasibility</h3>
+                            <li>Scraping historical data is possible and integrating it with real-time inputs enables accurate demand predictions.</li> 
+                            <li>Hourly analysis is feasible with access to detailed historical and real-time data. 
+                            Identifying seasonality and trends is achievable with a substantial amount of data and an effective forecasting model.</li>
+                            <li>Utilizing existing weather and holiday datasets enhances the accuracy of these forecasts.</li>
+                            <br>
+                            <img src="static/Picture-4.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6 mt-3">
+                            <h3>Vaibility</h3>
+                            <li>The availability of electricity demand and usage data on the grid-India website ensures that the model can accurately predict electricity demand.</li>
+                            <li>The availability of a weather API that allows for easy fetching of weather parameters</li>
+                            <li>The solution complies with existing regulations regarding data usage and energy management, ensuring that it aligns with industry standards.</li>
+                            <img src="static/Picture-5.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+  
+                <div
+                  class="tab-pane fade"
+                  id="nav-4"
+                  role="tabpanel"
+                  aria-labelledby="nav-4-tab"
+                  tabindex="4"
+                >
+                  <div class="row">
+                    <div class="col-md-6 mt-3">
+                        <h3>Impact</h3>
+                        <li>The proposed solution addresses the significant load fluctuations by providing reliable forecasts for peak demand in advance.</li>
+                        <li>Forecasting demand in advance can help in planning and resource allocation which can help to reduce supply shortages.</li>
+                        <li>Predicting hourly demand helps in planning for peak usage times.</li>
+                        <li>The same solution can be extended to any state or city.</li>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <h3>Benifits</h3>
+                        <li>Improved demand management for efficient power allocation.</li>
+                        <li>Reduced peak load, preventing blackouts and brownouts.</li>
+                        <li>Enhanced grid stability for reliable power supply.</li>
+                        <li>Lower operational costs through optimized resource allocation.</li>
+                        <li>Increased customer satisfaction with uninterrupted power.</li>
+                        <li>Optimized production planning for improved efficiency.</li>
+                        <li>Reduced energy costs and increased profitability.</li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End gallery -->
+  
+
+    <!-- Services -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-5">
+            <span class="mainheading">Team</span>
+            <span class="subheading">Technlogy is our motivation</span>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <span>
+                <img src="static/images/team/team-1.jpg" class="img-fluid rounded-circle" width="150px" alt="">
+                    <br />
+                    <br>
+                <h3>
+                    Anuja Pawar
+                </h3>
+                <p>Team Lead</p>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <span>
+                <img src="static/images/team/team-2.jpg" class="img-fluid rounded-circle" width="150px" alt="">
+                    <br />
+                    <br>
+                <h3>
+                    Harshal More
+                </h3>
+                <p>Team Member</p>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <span>
+                <img src="static/images/team/team-3.jpg" class="img-fluid rounded-circle" width="150px" alt="">
+                    <br />
+                    <br>
+                <h3>
+                    komal pathade
+                </h3>
+                <p>Team Member</p>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <span>
+                <img src="static/images/team/team-4.jpg" class="img-fluid rounded-circle" width="150px" alt="">
+                    <br />
+                    <br>
+                <h3>
+                    Sanket Sarode
+                </h3>
+                <p>Team Member</p>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <span>
+                <img src="static/images/team/team-1.jpg" class="img-fluid rounded-circle" width="150px" alt="">
+                    <br />
+                    <br>
+                <h3>
+                    Onkar kalyankar
+                </h3>
+                <p>Team Member</p>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <span>
+                <img src="static/images/team/team-6.jpg" class="img-fluid rounded-circle" width="150px" alt="">
+                    <br />
+                    <br>
+                <h3>
+                    Aniket Wahul
+                </h3>
+                <p>Team Member</p>
+              </span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- End Service -->
+
+    
+
+    
+
+    <!-- Start contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-5">
+            <span class="mainheading">Contact</span>
+            <span class="subheading">You can contact us any time</span>
+          </div>
+
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="p-4 text-center bg-dark mt-4">
+                  <i class="bi bi-house"></i>
+                  <h3>Address</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sapiente exercitationem quo non.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-4 text-center bg-dark mt-4">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email</h3>
+                  <p>text@example.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-4 text-center bg-dark mt-4">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Contact</h3>
+                  <p>XX-XXXXXXX</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="p-4 bg-dark mt-4">
+                  <p>We always welcome your messages and suggestions</p>
+                  <form action="">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="name@example.com"
+                      />
+                      <label for="floatingInput">Enter your name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="name@example.com"
+                      />
+                      <label for="floatingInput">Enter your email</label>
+                    </div>
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control"
+                        placeholder="Leave a comment here"
+                        id="floatingTextarea2"
+                        style="height: 100px"
+                      ></textarea>
+                      <label for="floatingTextarea2">Message</label>
+                    </div>
+                    <input type="submit" class="formbtn" />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End contact -->
+
+    <!-- Footer -->
+    <section id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="contactdetails text-center mb-5">
+              <h4>
+                <a class="navbar-brand" href="#"
+                  ><i class="bi bi-command"></i>&nbsp;&nbsp;THEMER</a
+                >
+              </h4>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+              <hr />
+              <p>
+                <i class="bi bi-envelope-at"></i>&nbsp;&nbsp;test@eample.com
+              </p>
+              <p><i class="bi bi-telephone"></i>&nbsp;&nbsp;XX-XXXXXXX</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="quicklinks mb-5">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><i class="bi bi-arrow-right"></i>Home</li>
+                <li><i class="bi bi-arrow-right"></i>About</li>
+                <li><i class="bi bi-arrow-right"></i>Services</li>
+                <li><i class="bi bi-arrow-right"></i>Team</li>
+                <li><i class="bi bi-arrow-right"></i>FAQs</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="footerservices mb-5">
+              <h4>Our services</h4>
+              <ul>
+                <li><i class="bi bi-arrow-right"></i>Web development</li>
+                <li><i class="bi bi-arrow-right"></i>Socila media marketing</li>
+                <li><i class="bi bi-arrow-right"></i>Product Develoment</li>
+                <li><i class="bi bi-arrow-right"></i>Transportation</li>
+                <li><i class="bi bi-arrow-right"></i>Call Center</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="footersocial mb-5">
+              <h4>Connect us on social media</h4>
+              <ul>
+                <li><i class="bi bi-facebook"></i>Facebook</li>
+                <li><i class="bi bi-instagram"></i>Instagram</li>
+                <li><i class="bi bi-linkedin"></i>LinkdeIn</li>
+                <li><i class="bi bi-envelope"></i>Google</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Footer -->
+
+    <div class="container-fluid">
+      <div class="row p-3 text-center copyright">
+        <p class="text-white">&copy; ProSortX</p>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- gallery js -->
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.2/dist/index.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
